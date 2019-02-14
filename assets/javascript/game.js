@@ -7,31 +7,31 @@ var ResetAndStart = function () {
 
     $(".crystals").empty();
 
-var RandomNumber = Math.floor(Math.random() * 101) + 19;
+    RandomNumber = Math.floor(Math.random() * 101) + 19;
 
     $("#results").html('Random Result: ' + RandomNumber);
 
-    for(var i = 0 ; i < 4; i++){
+    for (var i = 0; i < 4; i++) {
 
-var random = Math.floor(Math.random() * 11) + 1;
+        var random = Math.floor(Math.random() * 11) + 1;
 
-var crystal= $("<div>");
-            crystal.attr({
+        var crystal = $("<div>");
+        crystal.attr({
             "class": 'crystal',
-            "data-random":random
-            
-            
-        
+            "data-random": random
+
+
+
         });
 
         crystal.html(random);
-            
-               
-         $(".crystals").append(crystal);
 
-        }
 
-        $("#previous").html(previous);
+        $(".crystals").append(crystal);
+
+    }
+
+    $("#previous").html(previous);
 }
 
 
@@ -40,18 +40,18 @@ ResetAndStart();
 
 
 $(document).on('click', ".crystal", function () {
+    // console.log("GOT A CLICK");
+    var num = parseInt($(this).attr("data-random"));
 
-var num = parseInt($(this).attr("data-random"));
+    previous += num;
 
-         previous += num;
+    $("#previous").html(previous);
 
-         $("#previous").html(previous);
+    console.log(previous, RandomNumber);
 
-         console.log(previous)
-    
-    if(previous > RandomNumber){
-    
-
+    if (previous > RandomNumber) {
+        // debugger;
+        console.log('you lose bud');
         lost--;
 
         $("#lost").html(lost);
@@ -59,11 +59,9 @@ var num = parseInt($(this).attr("data-random"));
         previous = 0;
 
         ResetAndStart();
-    
-    }
-    
-    else if(previous === RandomNumber){ 
-    
+
+    } else if (previous === RandomNumber) {
+
         win++;
 
         $("#win").html(win);
@@ -73,8 +71,4 @@ var num = parseInt($(this).attr("data-random"));
         ResetAndStart();
 
     }
- 
-    
-
-
 });
