@@ -2,7 +2,7 @@ var RandomNumber;
 var win = 0;
 var lost = 0;
 var previous = 0;
-var imageArray= ["https://pbs.twimg.com/profile_images/378800000856607865/e96CZNLU_400x400.jpeg", "http://i.dailymail.co.uk/i/pix/2016/04/15/15/333699FA00000578-3541921-image-a-89_1460729476370.jpg", "https://image.tmdb.org/t/p/original/7zMtjSgbsgBu0BXQodHXMnRTDui.jpg","https://thefangirlsdilemma.files.wordpress.com/2012/09/billy-crystal-miracle-max.jpg"]
+var imageArray= ["https://pbs.twimg.com/profile_images/378800000856607865/e96CZNLU_400x400.jpeg", "http://i.dailymail.co.uk/i/pix/2016/04/15/15/333699FA00000578-3541921-image-a-89_1460729476370.jpg", "https://i.imgflip.com/z5z8e.jpg","https://thefangirlsdilemma.files.wordpress.com/2012/09/billy-crystal-miracle-max.jpg"]
 var ResetAndStart = function () {
 
     $(".crystals").empty();

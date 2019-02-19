@@ -7,12 +7,24 @@
     
 }
 .crystal{
-    border: 1px solid blueviolet;
-    height: 200px;
-    width: 200px;
+    border: 2px solid blueviolet;
+    height: 300px;
+    width: 300px;
 
 }
 
 p{
-    display: inline-block
+    display: inline-block;
+    font: bold;
+
+}
+
+.jumbotron.jumbotron-fluid{
+    background-image:url("https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1563105/580/387/m1/fpnw/wm0/1607.m00.i121.n056.f.c06.202479793-_gtp_-falling-snow-background.-winter-snowed-sky-vector-illustration-.jpg?1471377251&s=04326a14130d55c37afa3290d5cac370")
+}
+
+h2{
+    font-display: bold;
+    color: aliceblue;
+    
 }
